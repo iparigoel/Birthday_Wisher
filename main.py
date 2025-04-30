@@ -12,6 +12,7 @@ def sendEmail(to, sub, msg):
         s.starttls()
         s.login(GMAIL_ID, GMAIL_PSWD)
         s.sendmail(GMAIL_ID, to, f"Subject: {sub}\n\n{msg}")
+        
         s.quit()
         print(f"Email sent to {to}")
     except Exception as e:
