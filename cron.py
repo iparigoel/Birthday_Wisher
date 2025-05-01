@@ -25,7 +25,7 @@ def scheduled_job():
         print(f"Error sending emails: {e}")
 
 scheduler = BackgroundScheduler(timezone="Asia/Kolkata")
-scheduler.add_job(scheduled_job, 'cron', hour=00, minute=41)  
+scheduler.add_job(scheduled_job, 'cron', hour=00, minute=00)  
 scheduler.start()
 
 print("Scheduler started...")
