@@ -1,14 +1,14 @@
 from apscheduler.schedulers.background import BackgroundScheduler
 from main import sendEmail
 import datetime
-import time
+import time, os
 from apscheduler.schedulers.background import BackgroundScheduler
 import pandas as pd
 from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
 from main import sendEmail 
 
-SERVICE_ACCOUNT_FILE = 'C:\Users\pggoe\Downloads\birthday-wisher-460114-8b7520e382cb.json' 
+SERVICE_ACCOUNT_FILE = os.path.join(os.path.dirname(__file__), 'credentials.json') 
 SPREADSHEET_ID = 'pggoel1334@gmail.com'  
 RANGE_NAME = 'BirthdayData!Name:Email' 
 
