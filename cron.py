@@ -12,7 +12,7 @@ SERVICE_ACCOUNT_FILE = 'C:\Users\pggoe\Downloads\birthday-wisher-460114-8b7520e3
 SPREADSHEET_ID = 'pggoel1334@gmail.com'  
 RANGE_NAME = 'BirthdayData!Name:Email' 
 
-SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 def fetch_sheet_data():
     creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
