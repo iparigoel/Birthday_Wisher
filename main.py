@@ -1,9 +1,14 @@
+import os
+from dotenv import load_dotenv
 import pandas as pd
 import datetime
 import smtplib
+from email.mime.text import MIMEText
 
-GMAIL_ID = 'rggoel1334@gmail.com'
-GMAIL_PSWD = 'hinf ycct smmz tzii'
+load_dotenv()
+
+GMAIL_ID = os.getenv("EMAIL_ADDRESS")
+GMAIL_PSWD = os.getenv("GMAIL_APP_PASSWORD")
 
 def sendEmail(to, sub, msg):
     print(f"Email to {to} sent with subject: {sub} and message {msg}")
